@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo Cards</title>
+  <link rel="stylesheet" href="css.css"> <!-- tu CSS -->
+</head>
+
+<body>
+
+  <header>
+    <button id="goBack">
+      Go back!
+    </button>
+  </header>
+  <section>
+
+  </section>
+  <section class="section sectionEevee">
+
+    <br> <!--Spacing so it doesnt crash with the go back button on movile-->>
+
+    <h2 class="main-title">WEEEELCOM TO MY ABOUT ME PAGE!</h2>
+    <div class="special-layout">
+      <div class="card left-card">
+        <ul><h2 class="title" style="margin: 0;">Social media c:</h2></ul>
+        <br>
+        <ul>
+          <li>Discord: <a id="discord" href="#">amouricat <br> (Click to copy!)</a>
+          <img src="./assets/discord.webp" alt=""></li>
+          
+          <li>Spotify: <a target="_blank" href="https://open.spotify.com/user/31hl5oy4q7jwnkpootb5riynfjdm?si=705797baad6e444d">Click here c:</a>
+          <img src="./assets/spotify.png" alt=""></li>
+          
+          <li>Youtube: <a target="_blank" href="https://www.youtube.com/@AmouriCaT">Click here</a>
+          <img src="./assets/youtube.png" alt=""></li>
+          
+          <li>Roblox?: <a target="_blank" href="https://www.roblox.com/users/564106559/profile">Here c:</a>
+          <img src="./assets/roblox.jpg" alt=""></li>
+
+          <li>Steam: <a target="_blank" href="https://steamcommunity.com/profiles/76561199031705719/">Profile!</a>
+          <img src="assets/steam.jpg" alt=""></li>
+        </ul>
+      </div>
+      <div class="card main-card">
+        <div class="inner-card">
+          <h2 class="main-title">HIIIIIII!</h2>
+          <div class="adjust-text">My name is Tristan c:!! and i'm:</div>
+          <br>
+          <div class="adjust-text">
+            - 17 years old <br>
+            - trash programmer <br>
+            - cat/dog lover & eevee fan! <br>
+            - analog horror & horror mysteries fan <br>
+            - decent leader (not much lately tho) <br><br>
+
+            I love bright colors, but also deep dark blues! <br>
+            they make me feel calm, happy and nostalgic <br><br>
+
+            i used to be someone ultra social too! <br>
+            now i just lack the energy, but i still love to meet new friends, talk for a while, help people, learn from people and try my best to do so :3 <br><br>
+
+            im not a very worried person at all, <br>
+            i just try to enjoy every moment while having fun! <br>
+            BUT i do worry about my loved one a lot c: <br>
+            YES one, i have a love! her name is Jiin, and shes the best thing that has ever happened to me <br><br>
+
+            Theres so much more to say! <br>
+            so if u wanna know, feel free to ask or just talk with me :3 <br>
+            maybe we could become friends! <br><br>
+
+            BUT BE AWARE! I cant let go of jiin for more than 10 minutes soo, expect her everywhere around me c: <br>
+          </div>
+
+        </div>
+      </div>
+      <div class="card right-card">
+        <ul><h2 class="title" style="margin: 0;">Other links!</h2></ul>
+        <br>
+        <ul>
+          <li>Wanna draw us something? (Jiin and me), <a target="_blank" href="#">Click here!</a></li>
+          <li>Wanna check our projects channel?, <a href="#">WELL WE DONT HAVE ONE YET!</a></li>
+          <li>Wanna join our discord projects server!?, <a href="#">WE DONT HAVE ONE YET EITHER</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const discordLink = document.getElementById('discord');
+      discordLink.addEventListener('click', function(event) {
+        event.preventDefault(); // Evita que el enlace se abra
+        navigator.clipboard.writeText('amouricat') // Copia el texto al portapapeles
+          .then(() => {
+            alert('¡Discord username copiado al portapapeles!'); // Notifica al usuario
+          })
+          .catch(err => {
+            console.error('Error al copiar al portapapeles: ', err);
+          });
+      });
+    </script>
+
+
+    <div class="section-divider"><img src="" alt="awwawa"></div>
+  </section>
+
+
+  <section class="section sectionStray">
+    <div class="card card-80">
+      <div class="inner-card">
+        <h2 class="main-title">Games i play at the moment!</h2>
+        <p>(With my love)</p>
+        <br>
+        <ul>
+          <li>1: Grave Digger: <a target="_blank" href="https://www.roblox.com/games/18259975825/Grave-Digger">Game link here! c:</a></li>
+          <li>2: Decaying Winter: <a target="_blank" href="https://www.roblox.com/games/13438553315/Decaying-Winter">Game link also here!</a></li>
+          <li>3: CHAIN: <a target="_blank" href="https://www.roblox.com/games/10204250851/CHAIN">Cadena link!</a></li>
+          <li>4: Forsaken: <a target="_blank" href="https://www.roblox.com/games/18687417158/Forsaken">Link!</a></li>
+          <li>5: Grace: <a target="_blank" href="https://www.roblox.com/games/138837502355157/Grace">I LOVE THIS GAME</a></li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <h2 class="main-title">Also my favorite games are:</h2>
+    <div class="cards-2">
+      <div class="card card-40">
+        <div class="inner-card">
+          <img src="./assets/stray.jpg" alt="Game Image">
+          <p class="title">Stray</p>
+          <h1 class="adjust-text">My beloved Jiin gifted this game to me when we met, really fell in love hard with her and it uwu</h1>
+        </div>
+      </div>
+      <div class="card card-40">
+        <div class="inner-card">
+          <img src="./assets/subnautica.jfif" alt="Game Image">
+          <p class="title">Subnautica</p>
+          <h1 class="adjust-text">Just a childhood game, i love how scared it makes me feel, and how free silent and calm it can be c:</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+  </section>
+  <section class="section sectionEevee2">
+    <h2 class="main-title">AND FINALLY!</h2>
+    <div class="card card-100">
+      <div class="inner-card">
+        <h2 class="main-title">Questions about me >:3</h2>
+        <div class="adjust-text">
+          <br><h1><strong>1. When do I feel most like myself?</strong><br>
+          When I’m free, without restrictions or pressure. I enjoy being with at least one person—especially my girlfriend—because I’m very social and like sharing moments.</h1>
+
+          <br><h1><strong>2. What instantly changes my mood?</strong><br>
+          My girlfriend. Her emotions directly affect mine—if she’s happy, I’m happy; if she’s sad, I feel it too. Nothing else impacts me the same way.</h1>
+
+          <br><h1><strong>3. What do I look for in close people?</strong><br>
+          Mainly honesty. I value people showing who they truly are from the start so I can understand and accept them without judgment.</h1>
+
+          <br><h1><strong>4. What makes me lose track of time?</strong><br>
+          Imagining scenes with music and playing video games, especially with my girlfriend. Music stores memories and emotions for me.</h1>
+
+          <br><h1><strong>5. What gives me peace of mind?</strong><br>
+          When everything is calm, positive, and there’s nothing to worry about. Especially when I’m happy, my girlfriend is happy, and I can finally relax without thinking.</h1>
+        </div>
+        <br> <hr>
+        <h2 class="main-title">My favorite stuff about Jiiny!</h2>
+        <div class="adjust-text">
+          <h1><strong>1.</strong> SHE LOVES KITTIES AND SHES A KITTY SO CUTE KITTY GIRL</h1>
+          <br>
+          <h1><strong>2.</strong> Shes such a shy cutie, truly so fucking fucking cute &lt;33333</h1>
+          <br>
+          <h1><strong>3.</strong> Her love keeps me alive so hard C: being with her motivates me to do EVERYTHING for her &gt;:3</h1>
+          <br>
+          <h1><strong>4.</strong> She's so loving fr and im pretty sure that no matter what, she will stay by my side forever, as i will c:~</h1>
+          <br>
+          <h1><strong>5.</strong> She tries her best to improve too :D, and everytime we get better and better together, so cute</h1>
+          <br>
+          <h1><strong>6.</strong> Basically, i couldnt ask for anyone better ever in my life, she gave me so many lessons, teached me how to love, how to live, showed me the true meaning of my acts, and she was exacly what i wanted / needed.</h1>
+          <br>
+          <h1>thank u for everything jiin ;D forever yours <br>- Tristan</h1>
+        </div>
+      </div>
+    </div>
+    
+    <!-- DOUBLE CARDS!!! FIRE -->>
+    
+    <div class="cards-3">
+      <!-- Firs card c: -->
+      <div class="card card-30">
+        <ul><h2 class="title">My Strenghts :p</h2></ul>
+        <ul>
+          <li>I never ever give up! no matter what</li>
+          <li>I seek improvement all the time c:</li>
+          <li>I know how to understand and analize myself</li>
+          <li>Easy to think logically</li>
+          <li>I accept reality as it is</li>
+          <li>No care about other's opinions on myself</li>
+          <li>Understand people's acts instead of judging</li>
+          <li>No care about stupid stuff like racial shit, etc</li>
+        </ul>
+      </div>
+
+      <!-- Second card c: -->
+      <div class="card card-30">
+        <ul><h2 class="title">My fears / weaknesses O.O</h2></ul>
+        <ul>
+          <li>Its hard to stop thinking when i have too much to do</li>
+          <li>Very jealous person with my wife!</li>
+          <li>Way too fragile with my wife</li>
+          <li>Hard to think emotionally</li>
+          <li>Hard to connect my emotions with my logic</li>
+        </ul>
+      </div>
+
+      <!-- Thir card c: -->
+      <div class="card card-30">
+        <ul><h2 class="title">My current projects / goals!</h2></ul>
+        <ul>
+          <li>A exploring / fighting / farming game in roblox!</li>
+          <li>Learn C++ bc its WAY too op</li>
+          <li>I made an app! so i'm trying to find clients to sell it to (Schools)</li>
+          <li>Learn to cook super yummy and sane stuff for my jiin c:</li>
+          <li>Improve emotionally!</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <br>
+    <button id="goBack2">Go back to main page c:</button>
+  </section>
+
+  <script>
+    const button = document.getElementById("goBack").addEventListener("click", () => {
+      window.location.href = "../index.html"
+    });
+
+    const button2 = document.getElementById("goBack2").addEventListener("click", () => {
+      window.location.href = "../index.html"
+    });
+  </script>
+</body>
+</html>
