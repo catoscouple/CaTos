@@ -57,7 +57,7 @@
 
 @keyframes heartsAnim {
   from {
-    transform: translate(10%, 10%);
+    transform: translate(20%, 20%);
   } to {
     transform: translate(-100%, -100%);
   }
