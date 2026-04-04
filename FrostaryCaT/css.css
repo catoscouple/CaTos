@@ -1,0 +1,486 @@
+/* =========================
+   ROOT (COLORES GLOBALES)
+========================= */
+:root {
+  --color-bg: #1a1405;
+  --grad-1: #3a2d0a;
+  --grad-2: #ff9cae;
+  --grad-3: #a47cf0;
+  --grad-4: #1ca048;
+  --grad-5: #d4a72c;
+  --grad-6: #ffecfae5;
+  --grad-7: #eee061ec;
+
+  --background: #000033;
+
+  --color-text: #e6e6e6;
+  --color-muted: #fffceed0;
+
+}
+
+
+button {
+  z-index: 10;
+  
+  position: absolute;
+  display: block;
+  background: transparent;
+  padding: 10px 5px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  cursor: pointer;
+
+  font-size: 20px;
+  color: var(--color-5);
+
+  text-shadow: 0 0 5px var(--main-text);
+
+  border: 2px solid var(--color-bg);
+  border-radius: 10px;
+
+  transition: color 0.2s ease, box-shadow 0.2s ease, border 0.2s ease;
+}
+
+header button {
+  left: 10px !important;
+  top: 10px !important; 
+  transform: translate(0%, 0%);
+}
+
+button:hover {
+  box-shadow:
+    0 0 10px var(--color-4),
+    0 0 40px var(--color-1),
+    0 0 80px var(--color-1);
+  color: var(--color-5);
+  
+  border: 2px solid var(--background);
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-bg);
+  color: var(--color-text)
+}
+
+/* =========================
+   SECTION
+========================= */
+.section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 40px 20px;
+  background: var(--background);
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/eevees.jpg");
+  background-size:cover;
+  background-position: center;
+  background-repeat: repeat;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* =========================
+   DIVISOR
+========================= */
+.section-divider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--grad-5), transparent);
+  margin: 40px 0;
+  bottom: -80px;
+}
+
+.section-divider img {
+  position: absolute;
+  right: 10px;
+  top: -50px;
+  width: 50px;
+}
+
+/* =========================
+   CARDS BASE
+========================= */
+.card {
+  background: linear-gradient(
+    145deg,
+    var(--grad-2),
+    var(--grad-3),
+    var(--grad-4)
+  );
+
+  border: 2px solid rgba(255, 220, 120, 0.2);
+  border-radius: 12px;
+  
+  color: var(--color-text);
+  padding: 18px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255, 220, 120, 0.1);
+
+  backdrop-filter: blur(5px);
+  transition: transform 1s ease, box-shadow 2s ease;
+}
+
+.inner-card {
+  background: linear-gradient(
+    290deg,
+    var(--grad-2),
+    var(--grad-3),
+    var(--grad-4)
+  );
+
+  border: 2px solid var(--grad-3);
+  border-radius: 12px;
+
+  color: var(--grad-6);
+  padding: 25px;
+
+  backdrop-filter: blur(5px);
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* =========================
+   CARD 80%
+========================= */
+.card-80 {
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 1 / 1;
+  margin: 20px;
+}
+
+/* =========================
+   2 CARDS
+========================= */
+.cards-2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-40 {
+  width: 40%;
+  max-width: 400px;
+  height: 920px;
+  margin-top: 19px;
+}
+
+/* =========================
+   3 CARDS
+========================= */
+.cards-3 {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card-30 {
+  width: 20%;
+  max-width: 300px;
+  aspect-ratio: 1 / 2;
+}
+
+/* =========================
+   LAYOUT ESPECIAL PRO
+========================= */
+.special-layout {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* 🔥 clave */
+  gap: 20px;
+  width: 100%;
+}
+
+/* left y right */
+.left-card,
+.right-card {
+  flex: 0 0 300px;
+}
+
+.main-card {
+  flex: 1 1 auto;
+  max-width: 800px;
+  aspect-ratio: 1 / 1;
+  min-width: 200px;
+}
+
+.main-card {
+  min-width: 200px;
+}
+
+@media (max-width: 900px) {
+
+  .special-layout {
+    flex-wrap: wrap; /* 🔥 ahora sí correcto */
+    justify-content: center;
+  }
+
+  /* MAIN ARRIBA */
+  .main-card {
+    order: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+
+  /* CONTENEDOR IMPLÍCITO (los dos abajo juntos) */
+  .left-card,
+  .right-card {
+    order: 2;
+    flex: 0 0 150px;
+  }
+}
+
+/* =========================
+   TEXTO
+========================= */
+.main-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  color: var(--grad-6);
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 7px rgba(248, 145, 188, 0.671);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h1, h2, h3, p, li{
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.45rem;
+}
+
+h2 {
+  font-size: 1.37rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+p {
+  font-size: 1.34rem;
+  color: var(--color-muted);
+  line-height: 28px;
+}
+
+.image {
+  width: 400px;
+  flex-shrink: 0;
+  transition: transform 1s ease;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border-radius: 10px;
+  flex: 1 1 100%;
+  margin-top: 28px;
+  }
+
+.image1 img{
+  transform: rotateZ(4deg);
+  box-shadow: 0 0 4px var(--grad-3);
+}
+
+.image2 img{
+  transform: rotate(-4deg);
+  width: 290px;
+  height: auto;
+  box-shadow: 0 0 4px var(--grad-2);
+}
+
+.image3 img{
+  transform: rotateZ(3deg);
+  box-shadow: 0 0 4px var(--grad-4);
+  height: 300px;
+  width: auto;
+}
+
+.column img{
+flex-wrap: wrap;
+display: flex;
+ }
+
+.gamecard{
+  height: 400px;
+  width: auto;
+  box-shadow: 0 0 4px var(--grad-2)
+}
+
+.omori{
+  background-image: url(./assets/amouri.jpg);
+  background-size: cover; 
+  align-content: center;
+}
+
+.twr{
+  background-image: url(./assets/twr.png);
+  background-size: cover; 
+  align-content: center;
+}
+
+.goalscard{
+  height: 370px;
+  width: 870px;
+  margin: 20px auto;
+  flex: 0 0 100%;
+}
+
+.evo{
+  position: fixed;
+  bottom: 1px;
+  width: 500px;
+  z-index: 999;
+  left: 100vw;  
+  animation: evo 9s linear infinite;
+}
+
+@keyframes evo {
+  0% {
+    left: 100vw;  
+  }
+  100% {
+    left: -500px;
+  }
+}
+
+.card:hover{
+  transform: scale(1.003);
+  box-shadow: 0 0 5px #ff9cae;
+}
+
+.image:hover{
+  transform: scale(1.02);
+}
+
+.socials{
+  height: 120px;
+  width: auto;
+  background-color:#a47cf0;
+  border-radius: 10px;
+  align-content: center;
+  margin: 10px;
+}
+
+.tris{
+  height: 350px;
+  width: 1000px;
+  background: linear-gradient(
+    145deg,
+    var(--grad-5),
+    var(--grad-7),
+    var(--grad-5)
+  );
+
+  border: 2px solid rgba(255, 220, 120, 0.2);
+  border-radius: 12px;
+  
+  color: var(--color-text);
+  padding: 18px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.5),
+    inset 0 0 10px rgba(255, 220, 120, 0.1);
+
+  backdrop-filter: blur(5px);
+  transition: transform 1s ease, box-shadow 2s ease;
+  margin: 0 auto;
+}
+
+.tris2{
+  background: linear-gradient(
+    290deg,
+    var(--grad-7),
+    var(--grad-5),
+    var(--grad-7)
+  );
+
+  border: 2px solid var(--grad-5);
+  border-radius: 10px;
+
+  color: var(--grad-7);
+  padding: 25px;
+
+  backdrop-filter: blur(5px);
+
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  align-content: center;
+}
+
+.fotos-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.fotos {
+  height: 390px;
+  width:  auto;
+  display: inline-block;
+  text-align: center;
+  
+  box-shadow:
+    0 0 15px rgba(0, 2, 27, 0.5),
+    inset 0 0 10px rgba(0, 1, 44, 0.329);
+
+  backdrop-filter: blur(5px);
+  transition: transform 1s ease, box-shadow 2s ease;
+}
+
+.foto figcaption {
+  font-size: 1rem;
+  color: var(--color-text);
+}
