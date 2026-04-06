@@ -69,6 +69,7 @@
       };
 
       if (imageWindow.contains(event.target)) {
+        innerImageWindow.src = "";
         imageWindow.style.pointerEvents = "none";
         imageWindow.style.opacity = 0;
         return;
