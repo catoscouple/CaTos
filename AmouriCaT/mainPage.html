@@ -9,6 +9,74 @@
 
 <body>
 
+  <div class="gallerySection">
+    <button class="galleryButton">Close gallery</button>
+    <br><br>
+    <div class="img-group">
+      <h2 class="main-title">Memories with my love <3 </h2>
+      <h2 class="title">Click on images to view :D</h2>
+      <img src="./assets/gallery/bi hola by jiin.png" alt="Image!">
+      <img src="./assets/gallery/Chain SpellBook Xx 2.png" alt="Image!">
+      <img src="./assets/gallery/Chain SpellBook Xx.png" alt="Image!">
+      <img src="./assets/gallery/CUDDLE SHARKOS.png" alt="Image!">
+      <img src="./assets/gallery/cute blue kitttttios.png" alt="Image!">
+      <img src="./assets/gallery/cuties xombo atak (2).png" alt="Image!">
+      <img src="./assets/gallery/evo and silvo havin fun (1).png" alt="Image!">
+      <img src="./assets/gallery/fosake kis.png" alt="Image!">
+      <img src="./assets/gallery/GARDEN PRO.png" alt="Image!">
+      <img src="./assets/gallery/jiin chrima saba.png" alt="Image!">
+      <img src="./assets/gallery/jiin dw heart.png" alt="Image!">
+      <img src="./assets/gallery/JIIN GRABING SMT..png" alt="Image!">
+      <img src="./assets/gallery/Jiin grave and tristy.png" alt="Image!">
+      <img src="./assets/gallery/jiin north dark light 2.png" alt="Image!">
+      <img src="./assets/gallery/Jiin zz.png" alt="Image!">
+      <img src="./assets/gallery/Jiino and me raido (1).png" alt="Image!">
+      <img src="./assets/gallery/Jiino stare (1).png" alt="Image!">
+      <img src="./assets/gallery/Jiiny draw board JKHASKJ.png" alt="Image!">
+      <img src="./assets/gallery/mwa jiin flo ecae.png" alt="Image!">
+      <img src="./assets/gallery/my first dogo in twr 2.png" alt="Image!">
+      <img src="./assets/gallery/no se jiin el rake (2).png" alt="Image!">
+      <img src="./assets/gallery/room.png" alt="Image!">
+      <img src="./assets/gallery/stormo and radiomo (1).png" alt="Image!">
+      <img src="./assets/gallery/The pets ;3 4.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.07.23 - 07.13.49.08.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.07.23 - 07.26.42.27.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.08.05 - 08.08.40.33.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.08.05 - 08.15.03.58.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.08.05 - 08.15.05.03.png" alt="Image!">
+      <img src="./assets/gallery/Stray Screenshot 2025.08.05 - 08.45.41.59.png" alt="Image!">
+    </div>
+  </div>
+
+  <div class="imageWindow">
+    <img src="./assets/eeveeDanceBackground.gif" alt="image didnt load o.o">
+  </div>
+
+  <script>
+    // Para IMAGEWINDOW
+    const imageWindow = document.querySelector(".imageWindow");
+    const innerImageWindow = document.querySelector('.imageWindow img');
+
+    document.addEventListener("click", (event) => {
+      // if (!imageWindow.contains(event.target)) {
+      // }
+
+      if (event.target.tagName.toLowerCase() === "img") {
+        innerImageWindow.src = event.target.src;
+        imageWindow.style.opacity = 1;
+        imageWindow.style.pointerEvents = "all";
+        return;
+      };
+
+      if (imageWindow.contains(event.target)) {
+        imageWindow.style.pointerEvents = "none";
+        imageWindow.style.opacity = 0;
+        return;
+      }
+    });
+
+  </script>
+
   <header>
     <button id="goBack">
       Go back!
@@ -179,6 +247,8 @@
           <br>
           <h1>thank u for everything jiin ;D forever yours <br>- Tristan</h1>
         </div>
+        <br> <br> 
+        <button class="galleryButton">Gallery!</button>
       </div>
     </div>
     
@@ -227,6 +297,20 @@
     <br>
     <br>
     <button id="goBack2">Go back to main page c:</button>
+    <div class="section-divider"></div>
+  </section>
+
+  <section class="section sectionFinal">
+    <div class="card card-80">
+      <div class="inner-card">
+        <h2 class="main-title">Cute extras c:</h2>
+        <ul>
+          <li><a target="_blank" class="galleryButton">Open gallery :D</a></li>
+          <li><a target="_blank" href="">Draw us smt <3 (straw page)</a></li>
+          <li><a target="_blank" href="">Send us a message?! (straw page XD)</a></li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <script>
@@ -237,6 +321,13 @@
     const button2 = document.getElementById("goBack2").addEventListener("click", () => {
       window.location.href = "../index.html"
     });
+
+    const buttons = document.querySelectorAll(".galleryButton");
+    for (b of buttons) {
+      b.addEventListener("click", () => {
+        document.querySelector(".gallerySection").classList.toggle("active");
+      });
+    }
   </script>
 </body>
 </html>
