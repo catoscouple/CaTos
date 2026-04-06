@@ -448,6 +448,8 @@ ul li img {
   display: inline-block;
   background: white;
   opacity: 0.99;
+
+  pointer-events: none;
 }
 
 ul li:has(img) {
