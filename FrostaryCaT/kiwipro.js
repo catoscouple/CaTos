@@ -8,4 +8,4 @@ owo.addEventListener("click", () => {
 
 const button = document.getElementById("goBack").addEventListener("click", () => {
       window.location.href = "../index.html"
-    });
+    }); 
