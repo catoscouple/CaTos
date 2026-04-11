@@ -2,29 +2,59 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Demo Cards</title>
+  <title>FrostaryCaT</title>
   <link rel="stylesheet" href="css.css"> <!-- tu CSS -->
+  <link rel="icon" type="image/png" href="../mainAssets/Background.png">
 </head>
 
 <body>
-  <header>
-    <a href="../index.html" style="color: white;">
-      <button id="goBack">
-        Go back!
-      </button>
-    </a>
-  </header>
+<div id="bear" class="bear">CLICKING WILL START MUSIC :D</div>
+
+<header>
+  <button id="goBack">
+    Backalaka
+  </button>
+</header>
+
+<audio id="bg-music" autoplay loop>
+  <source src="./assets/northern lights.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  document.addEventListener("click", () => {
+    music.muted = false;
+    music.play();
+  }, { once: true });
+
+  music.volume = .5
+</script>
+
+<script>
+  const music = document.getElementById("bg-music");
+
+  // unmute after user clicks anywhere
+  document.addEventListener("click", () => {
+    music.muted = false;
+    music.play();
+  }, { once: true });
+</script>
+
 <section class="section">
   <H1 class="main-title">Welcome to my paaaaaaaage!</H1>
   <div class="cards-3"> 
     <div class="column">
       <div class="image image1">
-       <img src="./assets/tristannn.PNG" alt="Image 1">
+        <div class="description">la cutie in a cutie bed taking a cutie nap in a cutie place called kittyland while we escape from william the scary ass cat that will kill us even though we are cats? maybe because we're so cute? and he wanted to be the cutest but that's impossible because tristan will always be the cutest person in history. i know that this text is too long but you have to know all of what i'm saying right now because it's very important wow it's actually not too long</div>
+        <img src="./assets/tristannn.PNG" alt="Image 1">
       </div>
       <div class="image image2">
+        <div class="description">brave kitties beating up tha rake in a game that disappeared for some reason and we are super cute sword kitties hugging each other meow meow meow meow meow</div>
        <img src="./assets/rev.png" alt="Image 2">
       </div>
       <div class="image image3">
+        <div class="description">ancient photo of kitty and I dancing and holding hands from the egyptian eras back in 3200 BC</div>
        <img src="./assets/bag upp!.PNG" alt="Image 3">
       </div>
     </div>
@@ -45,14 +75,15 @@
     <br>
     <p>Not a very serious person and like to goof around most of the time</p>
     <p>I like to learn things but i'm lazy</p>
-    <p>I like bombos (running out of ideas on things to say)</p>
+    <p>meowmeowmeowmeowmeow</p>
     <p>Not really into any fandoms but I like fnaf and some anime and manga/manhwa but haven't put time into them in a long time since I got bored</p>
     <p>(Love to watch videos and shows with Tris though)</p>
     <p>This is my first coding project so it's dogwater but I love it and it's a lot of fun (thank you Tristan!!)</p>
-    <p>This is taking too long to make</p>
+    <p>Hope you enjoyed reading this</p>
     <br> <br>
-    <p>Remember to love yourself!</p>
-    <br> <br> <br>
+    <p>Love yourself!</p>
+    <br> <br>
+    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
     <p>!Eevee theme inspired by Tris because he loves eevees!</p>
     </div>
   </div>
@@ -207,3 +238,5 @@
 <img class="evo" src="./assets/evos.gif" alt="evos">
 </body>
 </html>
+
+<script src="./kiwipro.js"></script>
