@@ -5,3 +5,8 @@ owo.addEventListener("click", () => {
     owo.style.animation = "owokiwiproOut 3s ease forwards"
     owo.style.pointerEvents = "none"
 })
+
+const button = document.getElementById("goBack")
+button.addEventListener("click", () => {
+    window.location.href = "../index.html"
+})
