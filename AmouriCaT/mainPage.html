@@ -9,6 +9,8 @@
 
 <body>
 
+  <div id="ls" class="ls"><h2 class="main-title">Click to start your visit ;3</h2></div>
+
   <div class="gallerySection">
     <button class="galleryButton">Close gallery</button>
     <br><br>
@@ -329,6 +331,10 @@
     </div>
   </section>
 
+  <audio id="bg-music" autoplay loop>
+    <source src="./assets/bgMusic.mp3" type="audio/mpeg">
+  </audio>
+
   <script>
     const button = document.getElementById("goBack").addEventListener("click", () => {
       window.location.href = "../index.html"
@@ -337,6 +343,16 @@
     const button2 = document.getElementById("goBack2").addEventListener("click", () => {
       window.location.href = "../index.html"
     });
+
+    // music screen
+
+    document.getElementById("ls").addEventListener("click", () => {
+      document.getElementById("ls").style.animation = "lsOut 1s ease forwards";
+      document.getElementById("ls").style.pointerEvents = "none";
+      const music = document.getElementById("bg-music");
+      music.muted = false;
+      music.play();
+    }, {once: true});
 
     const buttons = document.querySelectorAll(".galleryButton");
     for (b of buttons) {

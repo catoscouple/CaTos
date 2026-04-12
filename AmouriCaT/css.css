@@ -666,3 +666,38 @@ hr {
     width: 100%;
   }
 }
+
+/* LOADING SCREEN */
+
+.ls {
+  background: rgba(0,0,0,.7);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  opacity: 0;
+  backdrop-filter: blur(20px);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 4;
+
+  animation: lsIn 1s ease forwards;
+}
+
+@keyframes lsIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+@keyframes lsOut {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
