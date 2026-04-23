@@ -336,7 +336,7 @@ p {
 .image3 img{
   transform: rotateZ(3deg);
   box-shadow: 0 0 4px var(--grad-4);
-  height: 300px;
+  height: 290px;
   width: auto;
 }
 
@@ -531,6 +531,7 @@ display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
+  font-size: 2.2vh;
 
   animation: kiwi 1s ease forwards;
 }
@@ -547,28 +548,4 @@ display: flex;
 
 html {
   transform-origin: top center;
-}
-
-@media (max-width: 1200px) {
-  html {
-    transform: scale(0.9);
-  }
-}
-
-@media (max-width: 1000px) {
-  html {
-    transform: scale(0.8);
-  }
-}
-
-@media (max-width: 800px) {
-  html {
-    transform: scale(0.7);
-  }
-}
-
-@media (max-width: 600px) {
-  html {
-    transform: scale(0.6);
-  }
 }
