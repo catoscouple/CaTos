@@ -278,7 +278,7 @@ section {
   animation: float 5s ease-in-out infinite alternate;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .card-30 {
     width: 100%;
     max-width: 500px;
@@ -701,3 +701,5 @@ hr {
     opacity: 0;
   }
 }
+
+/* For jiin animations */
